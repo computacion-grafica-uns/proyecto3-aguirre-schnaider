@@ -12,7 +12,7 @@ public class CalibrateMirrorV1 : MonoBehaviour
     private Vector3 mirrorNormal = Vector3.forward;
 
     // Usamos LateUpdate para asegurarnos de que se ejecuta después de que la cámara principal se haya movido
-    void LateUpdate()
+    void Start()
     {
         if (RoomCamera == null || MirrorCamera == null)
         {
@@ -30,7 +30,5 @@ public class CalibrateMirrorV1 : MonoBehaviour
         // También reflejamos el vector "up" para mantener la orientación correcta.
         Vector3 reflectedUp = Vector3.Reflect(RoomCamera.transform.up, mirrorNormal);
         MirrorCamera.transform.rotation = Quaternion.LookRotation(reflectedDirection, reflectedUp);
-
-        Debug.Log("Anduvo");
     }
 }
