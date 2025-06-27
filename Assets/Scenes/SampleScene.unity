@@ -1575,7 +1575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db31747da87c1604fb93139a45976e32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -382.04
+      value: -385.508
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db31747da87c1604fb93139a45976e32, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1583,7 +1583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db31747da87c1604fb93139a45976e32, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -47.79
+      value: -45.741
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db31747da87c1604fb93139a45976e32, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1958,7 +1958,7 @@ Transform:
   m_GameObject: {fileID: 209860349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.843, y: 2.31, z: -3.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,8 +1984,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.01980198
+  MaxDistance: 0.05
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2020,7 +2020,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2609,11 +2609,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c9cc4e00b3c484e8d4805f4a18f1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightToFlicker: {fileID: 0}
-  minOnTime: 0.05
-  maxOnTime: 0.15
-  minOffTime: 0.1
-  maxOffTime: 0.4
+  luz: {fileID: 0}
+  duracionEncendido: 0.3
+  duracionApagado: 0.1
+  intensidadCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxIntensidad: 2
 --- !u!1 &269232633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,7 +3440,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+  m_Color: {r: 0.93962264, g: 0.89175504, b: 0.89175504, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -5003,6 +5008,113 @@ Transform:
   - {fileID: 1891229418}
   m_Father: {fileID: 361006981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &577440834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577440835}
+  - component: {fileID: 577440837}
+  - component: {fileID: 577440836}
+  m_Layer: 0
+  m_Name: Luz mechero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577440835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577440834}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.228, y: -1.932, z: -0.936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1154461466}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577440836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577440834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21874c7d2de19f469d5fec2145fb1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!108 &577440837
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577440834}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.98490566, g: 0.8884592, b: 0.020441417, a: 1}
+  m_Intensity: 1001.2
+  m_Range: 0.26415205
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &579282610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,13 +6049,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645729193}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.05516331, y: -0.9176328, z: 0.13722298, w: 0.36888617}
+  m_LocalRotation: {x: 0.09866041, y: -0.893022, z: 0.23936807, w: 0.36807716}
   m_LocalPosition: {x: -381.505, y: -19.944464, z: -42.506268}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 297175329}
-  m_LocalEulerAnglesHint: {x: 17.01, y: -136.2, z: 0}
+  m_LocalEulerAnglesHint: {x: 30.01, y: -135.2, z: 0}
 --- !u!81 &645729195
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6025,7 +6137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d76b48041d5e4cb4aa7f1787d64b9df5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -385.214
+      value: -382.474
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d76b48041d5e4cb4aa7f1787d64b9df5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6033,7 +6145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d76b48041d5e4cb4aa7f1787d64b9df5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45.51827
+      value: -47.187
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d76b48041d5e4cb4aa7f1787d64b9df5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10361,10 +10473,11 @@ Transform:
   m_GameObject: {fileID: 1154461465}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -388.091, y: -21.557, z: -43.541}
+  m_LocalPosition: {x: -381.591, y: -20.139, z: -42.678}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 577440835}
   m_Father: {fileID: 361006981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!328 &1154461467
@@ -10374,7 +10487,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154461465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: e6f5bd6ba63c4974cb382951603e2f9b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -10413,18 +10526,18 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 10c49060cdca0694e95485a9015e9f32, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 120
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.02
+  MaxDistance: 0.05
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -10459,7 +10572,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -16239,7 +16352,7 @@ Transform:
   m_GameObject: {fileID: 1334328705}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.592003, y: 4.384198, z: 5.168}
+  m_LocalPosition: {x: -4.592003, y: 4.38, z: 5.317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16256,9 +16369,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8392157, b: 0.6666667, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 0.93962264, g: 0.8873867, b: 0.71446776, a: 1}
+  m_Intensity: 2
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -16982,7 +17095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621521}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421137797
@@ -18357,7 +18470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621521}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524656411
@@ -18541,7 +18654,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8392157, b: 0.6666667, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 103
@@ -20668,7 +20781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621521}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815458486
@@ -22113,7 +22226,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.02
   m_Range: 15
   m_SpotAngle: 30
