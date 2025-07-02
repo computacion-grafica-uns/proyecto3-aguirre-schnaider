@@ -34,9 +34,9 @@ public class GUIManager : MonoBehaviour
 
     private void Start()
     {
-        bServer.onClick.AddListener(delegate () { OnRoomButtonClicked(bServer,"Server"); });
-        bVillage.onClick.AddListener(delegate () { OnRoomButtonClicked(bVillage, "Village"); });
-        bDungeon.onClick.AddListener(delegate () { OnRoomButtonClicked(bDungeon, "Dungeon"); });
+        bServer.onClick.AddListener(delegate () { OnRoomButtonClicked(bServer,"Bedroom"); });
+        bVillage.onClick.AddListener(delegate () { OnRoomButtonClicked(bVillage, "Livingroom"); });
+        bDungeon.onClick.AddListener(delegate () { OnRoomButtonClicked(bDungeon, "Kitchen"); });
 
         bImagen.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bImagen, "Imagen"); });
         bDesplazamiento.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bDesplazamiento, "Desplazamiento"); });

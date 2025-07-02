@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiManager: {fileID: 1070427033}
-  timeBetweenAnomalies: 30
+  timeBetweenAnomalies: 10
   maxAnomalies: 16
   rooms:
   - {fileID: 292177186}
@@ -9385,7 +9385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Servers
+  m_text: Bedroom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
   m_sharedMaterial: {fileID: 4656010284473023306, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
@@ -18794,7 +18794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Village
+  m_text: Livingroom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
   m_sharedMaterial: {fileID: 4656010284473023306, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
@@ -22627,7 +22627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dungeons
+  m_text: Kitchen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
   m_sharedMaterial: {fileID: 4656010284473023306, guid: 112f26dded7a74548b65e3d6cc0c4ba6, type: 2}
