@@ -499,8 +499,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiManager: {fileID: 1070427033}
-  timeBetweenAnomalies: 7
-  maxAnomalies: 17
+  timeBetweenAnomalies: 15
+  maxAnomalies: 6
   rooms:
   - {fileID: 292177186}
   - {fileID: 1460527786}
