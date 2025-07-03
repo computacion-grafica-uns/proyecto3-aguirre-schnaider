@@ -4,7 +4,8 @@ public class EffectsManager : MonoBehaviour
 {
     // Creamos un array público para guardar una referencia a cada uno de los efectos de las cámaras.
     // El tipo de dato es "EmbossEffect", el nombre de tu script.
-    public EmbossEffect[] cameraEffects;
+    public EmbossEffect[] cameraEffects1;
+    public ScanlinesEffect[] cameraEffects2;
 
     void Update()
     {
@@ -20,12 +21,14 @@ public class EffectsManager : MonoBehaviour
     public void ToggleEffect()
     {
         // Verificamos que haya camaras
-        if (cameraEffects.Length > 0)
+        if (cameraEffects1.Length > 0 && cameraEffects2.Length > 0)
         {
-           for(int i=0; i < cameraEffects.Length; i++)
+           for(int i=0; i < cameraEffects1.Length; i++)
             {
-                if (cameraEffects[i]!=null)
-                    cameraEffects[i].on = !cameraEffects[i].on;
+                if (cameraEffects1[i]!=null)
+                    cameraEffects1[i].on = !cameraEffects1[i].on;
+                if (cameraEffects2[i]!=null)
+                    cameraEffects2[i].on = !cameraEffects2[i].on;
             }
 
         }

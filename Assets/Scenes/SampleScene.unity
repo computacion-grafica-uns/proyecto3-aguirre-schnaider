@@ -499,8 +499,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiManager: {fileID: 1070427033}
-  timeBetweenAnomalies: 10
-  maxAnomalies: 16
+  timeBetweenAnomalies: 7
+  maxAnomalies: 17
   rooms:
   - {fileID: 292177186}
   - {fileID: 1460527786}
@@ -1694,6 +1694,7 @@ GameObject:
   - component: {fileID: 200847744}
   - component: {fileID: 200847743}
   - component: {fileID: 200847745}
+  - component: {fileID: 200847746}
   m_Layer: 0
   m_Name: CameraBedroom
   m_TagString: Untagged
@@ -1789,6 +1790,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 0
   material: {fileID: 2100000, guid: 1c4d83278191d4d35af08106a3843ae6, type: 2}
+--- !u!114 &200847746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200847741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88571dab8b35d4986bd57c94d47728a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  grayscale: 0
+  amount: 800
+  strength: 0.9
+  noise: 0.4
+  speed: 5
+  material: {fileID: 2100000, guid: 34707840cacc149bbae1e03a783fcb40, type: 2}
 --- !u!1 &209860349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,19 +2451,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 264660914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c9cc4e00b3c484e8d4805f4a18f1e6, type: 3}
+  m_Script: {fileID: 11500000, guid: a4107ed69c415de41986cc3dcff2a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luz: {fileID: 0}
-  duracionEncendido: 0.3
-  duracionApagado: 0.1
-  intensidadCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  maxIntensidad: 2
+  lightToFlicker: {fileID: 1548574894}
+  minOnTime: 0.05
+  maxOnTime: 0.15
+  minOffTime: 0.1
+  maxOffTime: 0.4
 --- !u!1 &269232633
 GameObject:
   m_ObjectHideFlags: 0
@@ -4038,10 +4053,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899fb955d172560449bb1da9d8a621a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraEffects:
+  cameraEffects1:
   - {fileID: 200847745}
   - {fileID: 894656146}
   - {fileID: 645729197}
+  cameraEffects2:
+  - {fileID: 200847746}
+  - {fileID: 894656147}
+  - {fileID: 645729198}
 --- !u!4 &426293423
 Transform:
   m_ObjectHideFlags: 0
@@ -5914,6 +5933,7 @@ GameObject:
   - component: {fileID: 645729196}
   - component: {fileID: 645729195}
   - component: {fileID: 645729197}
+  - component: {fileID: 645729198}
   m_Layer: 0
   m_Name: CameraKitchen
   m_TagString: Untagged
@@ -6009,6 +6029,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 0
   material: {fileID: 2100000, guid: 1c4d83278191d4d35af08106a3843ae6, type: 2}
+--- !u!114 &645729198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645729193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88571dab8b35d4986bd57c94d47728a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  grayscale: 0
+  amount: 800
+  strength: 0.9
+  noise: 0.4
+  speed: 5
+  material: {fileID: 2100000, guid: 34707840cacc149bbae1e03a783fcb40, type: 2}
 --- !u!1001 &652391306
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8713,6 +8752,7 @@ GameObject:
   - component: {fileID: 894656144}
   - component: {fileID: 894656143}
   - component: {fileID: 894656146}
+  - component: {fileID: 894656147}
   m_Layer: 0
   m_Name: CameraLivingRoom
   m_TagString: Untagged
@@ -8808,6 +8848,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 0
   material: {fileID: 2100000, guid: 1c4d83278191d4d35af08106a3843ae6, type: 2}
+--- !u!114 &894656147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894656142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88571dab8b35d4986bd57c94d47728a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  grayscale: 0
+  amount: 800
+  strength: 0.9
+  noise: 0.4
+  speed: 5
+  material: {fileID: 2100000, guid: 34707840cacc149bbae1e03a783fcb40, type: 2}
 --- !u!1 &897281835
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,10 +11091,11 @@ Transform:
   m_GameObject: {fileID: 1204387310}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 599.1633, y: 114.476845, z: -4199.8696}
+  m_LocalPosition: {x: 599.28, y: 114.476845, z: -4199.8696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1548574895}
   m_Father: {fileID: 379390721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207272566
@@ -16600,7 +16660,7 @@ Transform:
   m_GameObject: {fileID: 1334328705}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.592003, y: 4.38, z: 5.317}
+  m_LocalPosition: {x: -4.592003, y: 4.38, z: 5.142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17343,7 +17403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621643}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421137797
@@ -18686,7 +18746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621643}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524656411
@@ -18787,9 +18847,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 0.9411765, g: 0.8862745, b: 0.7137255, a: 1}
+  m_Intensity: 1.41
+  m_Range: 2.73
   m_SpotAngle: 103
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -18847,11 +18907,11 @@ Transform:
   m_GameObject: {fileID: 1548574893}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: -3.0180016, y: 5.669198, z: 5.4279995}
+  m_LocalPosition: {x: 0.0040283203, y: -0.008789059, z: -0.0249939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1685766104}
+  m_Father: {fileID: 1204387313}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1559389208
 GameObject:
@@ -19745,7 +19805,6 @@ Transform:
   - {fileID: 673612625}
   - {fileID: 1815502652}
   - {fileID: 1334328706}
-  - {fileID: 1548574895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1689586723
@@ -20903,7 +20962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.413574, y: -6.621582}
+  m_AnchoredPosition: {x: 7.413574, y: -6.621643}
   m_SizeDelta: {x: 118.6178, y: 102.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815458486
